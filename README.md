@@ -60,13 +60,15 @@ Story 8
 
 Object   | Method
 -------- | --------
-Player   | result
+Player   |
+Opponent | result
 
 Story 9
 
 Object   | Method
 -------- | --------
-Player   | hits_and_misses
+Player   |
+Opponent | hits_and_misses
 
 Story 10
 
