@@ -1,5 +1,7 @@
 class Ship
-	def input
+
+	def boat
 		["A1"]
 	end
+
 end

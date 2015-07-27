@@ -1,6 +1,7 @@
 require_relative 'ship'
 
 class Board
+
 	def initialize
 		@co_ordinates = []
 	end
@@ -21,4 +22,5 @@ class Board
 			"Miss!"
 		end
 	end
+
 end

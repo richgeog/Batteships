@@ -4,7 +4,7 @@ describe Board do
 	it 'stores the location of ships' do
 		ship1 = Ship.new
 		board = Board.new
-		board.place ship1.input
+		board.place ship1.boat
 		expect(board.show_board).to eq [["A1"]]
 	end
 
@@ -15,18 +15,18 @@ describe Board do
 	it 'returns hit if ship is shot' do
 		ship1 = Ship.new
 		board = Board.new
-		board.place ship1.input
-		array = ship1.input
+		board.place ship1.boat
+		array = ship1.boat
 		expect(board.shoot array).to eq "Hit!"
 	end
 
 	it 'removes ship co-ordinates from array if hit' do
 		ship1 = Ship.new
 		board = Board.new
-		board.place ship1.input
-		array = ship1.input
+		board.place ship1.boat
+		array = ship1.boat
 		board.shoot array
 		expect(board.show_board).to eq []
 	end
 
-	it ''
+end
