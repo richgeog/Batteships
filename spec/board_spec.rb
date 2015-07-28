@@ -3,10 +3,16 @@ require 'board'
 describe Board do
 
 	let(:ship) { double(:ship, :locations => []) }
+	let(:ship1) { double(:ship, :locations => ["A1"])}
 
 	it 'stores the location of ships' do
 		subject.place ship
 		expect(subject.show_board).to eq [ship.locations]
+	end
+
+	it 'does not allow ships to overlap' do
+		subject.place ship1
+		expect{subject.place ship1}.to raise_error 'Ships cannot overlap!'
 	end
 
 	it 'allows player to take a shot' do

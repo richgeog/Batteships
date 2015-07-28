@@ -9,7 +9,16 @@ class Board
 	end
 
 	def place ship
+		overlap ship
 		@co_ordinates << ship.locations
+	end
+
+	def overlap ship
+		ship.locations.each do |x|
+			if @co_ordinates.flatten.include?(x.to_s)
+				fail 'Ships cannot overlap!'
+			end
+		end
 	end
 
 	def show_board
