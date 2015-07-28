@@ -31,4 +31,10 @@ class Board
 		end
 	end
 
+	def winner
+		if @co_ordinates.empty?
+			'You\'re the winner!'
+		end
+	end
+
 end
