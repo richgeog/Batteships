@@ -5,7 +5,7 @@ class Board
 
 	def initialize
 		@co_ordinates = []
-		@hit = []
+		@hits = []
 	end
 
 	def place ship
@@ -18,10 +18,10 @@ class Board
 
 	def shoot aim
 		if @co_ordinates.include?(aim)
-			@hit << @co_ordinates.delete(aim)
-			"Hit!"
+			@hits << @co_ordinates.delete(aim)
+			return "Hit!"
 		else
-			"Miss!"
+			return "Miss!"
 		end
 	end
 
