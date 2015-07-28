@@ -1,7 +1,8 @@
 class Ship
 
-	def boat
-		["A1"]
+	def initialize start_position, direction, size = 3
+    @locations = [start_position]
+
 	end
 
 end
