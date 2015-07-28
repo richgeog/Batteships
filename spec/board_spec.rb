@@ -29,4 +29,13 @@ describe Board do
 		expect(board.show_board).to eq []
 	end
 
+	it 'sinks the ship when it has been hit' do
+		ship1 = Ship.new
+		board = Board.new
+		board.place ship1.boat
+		array = ship1.boat
+		board.shoot array
+		expect(board.sunk).to eq "Sunk"
+	end
+
 end
