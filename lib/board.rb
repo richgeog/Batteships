@@ -9,7 +9,7 @@ class Board
 	end
 
 	def place ship
-		@co_ordinates << ship
+		@co_ordinates << ship.boat
 	end
 
 	def show_board
